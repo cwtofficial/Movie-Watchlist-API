@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="favi" href="" />
+    <title>Movie/Series Watchlist API Tutorial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+  </style>
+
+  <body class="bg-gray-50 text-gray-800">
+    <div class="max-w-4xl mx-auto py-12 px-6">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+          🎬 Movie/Series Watchlist API
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Complete Backend Tutorial: From Node.js Basics to Production-Ready API
+        </p>
+        <div
+          class="mt-6 inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium"
+        >
+          Personal watchlist with ratings, reviews & AI-powered recommendations
+        </div>
+      </div>
+
+      <!-- Tutorial Parts -->
+      <div class="space-y-8">
+        <!-- Part 1 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 1</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              Node.js Fundamentals
+            </h2>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              What is Node.js and why use it for APIs
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Built-in
+              <code class="bg-gray-100 px-2 py-1 rounded text-sm">http</code>
+              module walkthrough
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Creating basic server with raw Node.js
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Understanding request/response objects
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Handling different HTTP methods (GET, POST, PUT, DELETE) manually
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              URL parsing and routing without frameworks
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Working with JSON data parsing
+            </li>
+          </ul>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-emerald-100 text-emerald-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 2</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              Express Framework
+            </h2>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Why Express makes life easier
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Setting up Express server
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Middleware concept and examples
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Route parameters and query strings
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Request body parsing
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Error handling middleware
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Environment variables with dotenv
+            </li>
+          </ul>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-amber-100 text-amber-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 3</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              Building Core API Endpoints
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <code class="text-green-600 font-medium">GET /movies</code>
+              <p class="text-sm text-gray-600 mt-1">List all movies/series</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <code class="text-blue-600 font-medium">GET /movies/:id</code>
+              <p class="text-sm text-gray-600 mt-1">
+                Get specific movie details
+              </p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <code class="text-yellow-600 font-medium">POST /movies</code>
+              <p class="text-sm text-gray-600 mt-1">
+                Add new movie to watchlist
+              </p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <code class="text-purple-600 font-medium">PUT /movies/:id</code>
+              <p class="text-sm text-gray-600 mt-1">
+                Update movie details/status
+              </p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <code class="text-red-600 font-medium">DELETE /movies/:id</code>
+              <p class="text-sm text-gray-600 mt-1">Remove from watchlist</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 4 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-cyan-100 text-cyan-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 4</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              Database Integration
+            </h2>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Setting up MongoDB/PostgreSQL
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Database schema design for movies/series
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              CRUD operations with database
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Data validation and error handling
+            </li>
+          </ul>
+        </div>
+
+        <!-- Part 5 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-rose-100 text-rose-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 5</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              Authentication & Authorization Deep Dive
+            </h2>
+          </div>
+          <div class="bg-red-50 border border-red-200 p-4 rounded-lg mb-4">
+            <h3 class="font-semibold text-red-800 mb-2">🚨 Security Demo</h3>
+            <p class="text-red-700 text-sm">
+              First: Show how vulnerable unprotected endpoints are - demonstrate
+              anyone can delete/modify movie lists via Postman
+            </p>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-rose-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Implement JWT authentication
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-rose-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              User registration/login endpoints
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-rose-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Protecting routes with middleware
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-rose-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              User-specific watchlist access
+            </li>
+          </ul>
+        </div>
+
+        <!-- Part 6 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-violet-100 text-violet-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 6</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              Advanced Features
+            </h2>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Search movies by title/genre/actors
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Movie rating and review system
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              File upload for movie posters/images
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              API rate limiting
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              Input sanitization and validation
+            </li>
+          </ul>
+        </div>
+
+        <!-- Part 7 -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center mb-4">
+            <span
+              class="bg-fuchsia-100 text-fuchsia-800 text-sm font-semibold px-3 py-1 rounded-full mr-3"
+              >Part 7</span
+            >
+            <h2 class="text-2xl font-semibold text-gray-900">
+              🤖 AI Integration (2025 Edge)
+            </h2>
+          </div>
+          <div
+            class="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 p-4 rounded-lg mb-4"
+          >
+            <h3 class="font-semibold text-purple-800 mb-2 flex items-center">
+              <span class="mr-2">✨</span>
+              The Future of Movie APIs
+            </h3>
+            <p class="text-purple-700 text-sm">
+              Integrate cutting-edge AI to transform your API from basic CRUD to
+              intelligent, personalized movie companion
+            </p>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              <div>
+                <span class="font-medium">Smart Movie Recommendations</span>
+                <span class="text-gray-500 text-sm block"
+                  >AI learns from your watching habits and suggests personalized
+                  movies</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              <div>
+                <span class="font-medium"
+                  >AI Movie Analysis & Auto-Population</span
+                >
+                <span class="text-gray-500 text-sm block"
+                  >Let AI fetch and populate movie details automatically</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              <div>
+                <span class="font-medium">AI-Powered Review Generator</span>
+                <span class="text-gray-500 text-sm block"
+                  >Help users articulate their thoughts with AI writing
+                  assistance</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              <div>
+                <span class="font-medium">Watchlist Insights & Analytics</span>
+                <span class="text-gray-500 text-sm block"
+                  >AI analyzes viewing patterns and provides personality
+                  insights</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              <div>
+                <span class="font-medium">Natural Language Search</span>
+                <span class="text-gray-500 text-sm block"
+                  >"Find sci-fi movies I rated highly" - search with plain
+                  English</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span
+                class="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 mr-3 flex-shrink-0"
+              ></span>
+              <div>
+                <span class="font-medium">OpenAI API Integration</span>
+                <span class="text-gray-500 text-sm block"
+                  >Prompt engineering, GPT-4 setup, and responsible AI
+                  practices</span
+                >
+              </div>
+            </li>
+          </ul>
+          <div
+            class="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg"
+          >
+            <p class="text-sm text-yellow-800">
+              <span class="font-semibold">💡 Teaching Focus:</span>
+              Learn AI integration, prompt engineering, cost management, and
+              building intelligent features that set 2025 APIs apart
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools Section -->
+      <div class="mt-12 bg-gray-900 text-white rounded-lg p-8">
+        <h2 class="text-2xl font-bold mb-6 text-center">Tools We Would Use</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <div class="text-3xl mb-2">
+              <img
+                src="https://imgs.search.brave.com/DGaE5L4oGdZ_jAkkfDCSG36-sGcXdUfxRxB5NnCYvi8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzQ0LzIvcG9zdG1h/bi1hcGktcGxhdGZv/cm0tbG9nby1wbmdf/c2Vla2xvZ28tNDQ2/ODU5LnBuZw"
+                alt="logo"
+                class="w-20 h-20 mx-auto"
+              />
+            </div>
+            <h3 class="font-semibold">Postman</h3>
+            <p class="text-sm text-gray-300">API Testing</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <div class="text-3xl mb-2">
+              <img
+                src="https://imgs.search.brave.com/1w1vImnrjIvyKPi3XPgxSMWhurbFIU_cDdvEMS5K5Bo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdmdz/dGFjay5jb20vbWVk/aWEvaW1nL25vZGVq/cy1sb2dvLTJPalIy/MjE0Njcud2VicA"
+                alt=""
+                alt="logo"
+                class="w-20 h-20 mx-auto"
+              />
+            </div>
+            <h3 class="font-semibold">Node.js</h3>
+            <p class="text-sm text-gray-300">Runtime</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <div class="text-3xl mb-2">
+              <img
+                src="https://imgs.search.brave.com/29qrMkUQXtvymObc4BhOwGhocqLG5P2mXzRG9yB_X9g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzMzLzEvZXhwcmVz/cy1qcy1sb2dvLXBu/Z19zZWVrbG9nby0z/Mzk4NTAucG5n"
+                alt=""
+                alt="logo"
+                class="w-20 h-20 mx-auto"
+              />
+            </div>
+            <h3 class="font-semibold">Express</h3>
+            <p class="text-sm text-gray-300">Framework</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <div class="text-3xl mb-2">
+              <img
+                src="https://imgs.search.brave.com/8gjZXNauURqglYS13S3sb3h_O5XpX_pPHF5y2cCBnTA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvTW9u/Z29kYi1QTkctUGlj/LnBuZw"
+                alt=""
+                alt="logo"
+                class="w-20 h-20 mx-auto"
+              />
+            </div>
+            <h3 class="font-semibold">MongoDB</h3>
+            <p class="text-sm text-gray-300">Database</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="mt-8 text-center text-gray-500">
+        <p class="text-sm">
+          🎯 No frontend UI - Pure API development with Postman testing
+        </p>
+        <p class="text-sm mt-2">
+          Built By <a href="https://codewithty.dev" target="_blank">CWT</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

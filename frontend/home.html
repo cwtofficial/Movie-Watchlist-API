@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Tracker - Your Personal Cinema Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: 'Outfit', sans-serif;
+      }
+
+      .hero-bg {
+        background: linear-gradient(
+          to bottom right,
+          rgba(230, 240, 255, 0.9),
+          rgba(221, 214, 254, 0.9),
+          rgba(252, 231, 243, 0.9)
+        );
+      }
+
+      .feature-card {
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .float-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.3;
+        animation: blob 7s infinite;
+      }
+
+      @keyframes blob {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <!-- Navigation -->
+    <nav
+      class="bg-white bg-opacity-10 backdrop-blur-md shadow-lg sticky top-0 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <svg
+              class="h-8 w-8 text-white mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
+              />
+            </svg>
+            <h1 class="text-2xl font-bold text-white">Movie Tracker</h1>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="#features"
+              class="text-white hover:text-purple-200 transition font-medium"
+              >Features</a
+            >
+            <a
+              href="#how-it-works"
+              class="text-white hover:text-purple-200 transition font-medium"
+              >How It Works</a
+            >
+            <a
+              href="login.html"
+              class="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition transform hover:scale-105"
+              >Login</a
+            >
+            <a
+              href="register.html"
+              class="bg-purple-800 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-900 transition transform hover:scale-105"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 px-4">
+      <!-- Decorative blobs -->
+      <div
+        class="blob bg-purple-400"
+        style="width: 300px; height: 300px; top: 10%; left: 10%"
+      ></div>
+      <div
+        class="blob bg-pink-400"
+        style="
+          width: 250px;
+          height: 250px;
+          top: 50%;
+          right: 10%;
+          animation-delay: 2s;
+        "
+      ></div>
+      <div
+        class="blob bg-blue-400"
+        style="
+          width: 200px;
+          height: 200px;
+          bottom: 20%;
+          left: 20%;
+          animation-delay: 4s;
+        "
+      ></div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center">
+          <h1
+            class="text-6xl md:text-7xl font-bold text-white mb-6 float-animation"
+          >
+            Your Personal
+            <span class="block mt-2">Cinema Collection</span>
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-white text-opacity-90 mb-10 max-w-3xl mx-auto"
+          >
+            Track, organize, and discover movies you love with AI-powered
+            recommendations
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="register.html"
+              class="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-50 transition transform hover:scale-105 shadow-2xl"
+            >
+              Get Started Free
+            </a>
+            <a
+              href="login.html"
+              class="bg-purple-800 bg-opacity-80 backdrop-blur text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition transform hover:scale-105 shadow-2xl"
+            >
+              Sign In
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Image/Stats -->
+        <div
+          class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+        >
+          <div
+            class="bg-white bg-opacity-20 backdrop-blur-md rounded-2xl p-6 text-center text-white"
+          >
+            <div class="text-4xl font-bold mb-2">🎬</div>
+            <div class="text-3xl font-bold mb-1">Unlimited</div>
+            <div class="text-sm opacity-90">Movies to Track</div>
+          </div>
+          <div
+            class="bg-white bg-opacity-20 backdrop-blur-md rounded-2xl p-6 text-center text-white"
+          >
+            <div class="text-4xl font-bold mb-2">🤖</div>
+            <div class="text-3xl font-bold mb-1">AI-Powered</div>
+            <div class="text-sm opacity-90">Recommendations</div>
+          </div>
+          <div
+            class="bg-white bg-opacity-20 backdrop-blur-md rounded-2xl p-6 text-center text-white"
+          >
+            <div class="text-4xl font-bold mb-2">⭐</div>
+            <div class="text-3xl font-bold mb-1">Smart</div>
+            <div class="text-sm opacity-90">Movie Analysis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold gradient-text mb-4">
+            Everything You Need
+          </h2>
+          <p class="text-xl text-gray-600">
+            Powerful features to manage your movie collection
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="feature-card bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div
+              class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Track Your Movies
+            </h3>
+            <p class="text-gray-600">
+              Organize your entire movie collection in one place. Mark movies as
+              pending, ongoing, or completed.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="feature-card bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div
+              class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Rate & Review</h3>
+            <p class="text-gray-600">
+              Give ratings to your movies and keep track of your favorites. Your
+              ratings power better recommendations.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div
+              class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              AI Recommendations
+            </h3>
+            <p class="text-gray-600">
+              Get personalized movie suggestions based on your watching history
+              and preferences using advanced AI.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div
+              class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Smart Categories
+            </h3>
+            <p class="text-gray-600">
+              Organize movies by genre, status, and rating. Filter and find what
+              you're looking for instantly.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="feature-card bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div
+              class="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Instant Analysis
+            </h3>
+            <p class="text-gray-600">
+              Get detailed AI-powered analysis of any movie including ratings,
+              genre, and comprehensive reviews.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="feature-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg"
+          >
+            <div
+              class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+              Secure & Private
+            </h3>
+            <p class="text-gray-600">
+              Your data is secure with JWT authentication. Your movie collection
+              is private and only visible to you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section
+      id="how-it-works"
+      class="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold gradient-text mb-4">How It Works</h2>
+          <p class="text-xl text-gray-600">Get started in three simple steps</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div
+              class="bg-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              <span class="text-4xl font-bold text-white">1</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Create Account
+            </h3>
+            <p class="text-gray-600">
+              Sign up for free and create your personal movie tracking account
+              in seconds.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div
+              class="bg-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              <span class="text-4xl font-bold text-white">2</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Add Movies</h3>
+            <p class="text-gray-600">
+              Start adding movies you've watched, want to watch, or are
+              currently watching.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div
+              class="bg-pink-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              <span class="text-4xl font-bold text-white">3</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Get Recommendations
+            </h3>
+            <p class="text-gray-600">
+              Receive AI-powered movie recommendations based on your tastes and
+              ratings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-5xl font-bold text-white mb-6">
+          Ready to Start Tracking?
+        </h2>
+        <p class="text-xl text-purple-100 mb-10">
+          Join thousands of movie enthusiasts organizing their cinema journey
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="register.html"
+            class="bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-purple-50 transition transform hover:scale-105 shadow-2xl"
+          >
+            Create Free Account
+          </a>
+          <a
+            href="login.html"
+            class="bg-purple-800 bg-opacity-50 backdrop-blur text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-opacity-70 transition transform hover:scale-105 shadow-2xl border-2 border-white border-opacity-50"
+          >
+            Sign In
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <svg
+                class="h-8 w-8 text-purple-400 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
+                />
+              </svg>
+              <h3 class="text-2xl font-bold">Movie Tracker</h3>
+            </div>
+            <p class="text-gray-400">
+              Your personal cinema collection manager with AI-powered
+              recommendations.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-400 hover:text-purple-400 transition"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="text-gray-400 hover:text-purple-400 transition"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="login.html"
+                  class="text-gray-400 hover:text-purple-400 transition"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="register.html"
+                  class="text-gray-400 hover:text-purple-400 transition"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <p class="text-gray-400">
+              Have questions? We'd love to hear from you.
+            </p>
+            <p class="text-purple-400 mt-2">support@movietracker.com</p>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2025 Movie Tracker. All rights reserved. Made with ❤️ for
+            movie lovers.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Check if user is already logged in
+      const token = localStorage.getItem('token');
+      if (token) {
+        // Show a quick message or redirect option
+        const nav = document.querySelector('nav .flex.items-center.space-x-4');
+        nav.innerHTML = `
+                <span class="text-white font-medium">Welcome back!</span>
+                <a href="dashboard.html" class="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition transform hover:scale-105">Go to Dashboard</a>
+            `;
+      }
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
