@@ -6,7 +6,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 
-> **From JavaScript Basics to AI-Powered APIs** - A comprehensive tutorial series by [CWT](https://codewithty.dev)
+> **From JavaScript Basics to AI-Powered APIs** - A comprehensive tutorial series by [CWT](https://cwt.build)
 
 ## 📖 About This Tutorial
 
@@ -340,8 +340,8 @@ By the end of this tutorial, you will be able to:
 
 ## 🔗 Resources & Links
 
-- **Tutorial Website:** [codewithty.dev](https://codewithty.dev)
-- **YouTube Channel:** [Code With Ty](https://youtube.com/@codewithty)
+- **Tutorial Website:** [cwt.build](https://cwt.build)
+- **YouTube Channel:** [CWT](https://youtube.com/@officialcwt)
 - **Documentation:**
   - [Node.js Docs](https://nodejs.org/docs)
   - [Express.js Docs](https://expressjs.com)
@@ -400,7 +400,7 @@ This project is licensed under the CWT License
 
 Stop overthinking. Start building. Your journey from JavaScript developer to full-stack engineer with AI skills starts here.
 
-**[Get Started Now →](https://codewithty.dev)**
+**[Get Started Now →](https://cwt.build)**
 
 ---
 
@@ -414,13 +414,13 @@ Stop overthinking. Start building. Your journey from JavaScript developer to ful
 
 <div align="center">
 
-**Built with ❤️ by [CodeWithTy](https://codewithty.dev)**
+**Built with ❤️ by [CWT](https://cwt.build)**
 
-_See you at the Other End of Backend Development!_ 🚀
+_See you at the Other End of Backend Development!_ 
 
-[![Follow on Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/codewithty)
-[![Subscribe on YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@codewithty)
-[![Follow on TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://tiktok.com/@codewithty_)
+[![Follow on Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/cwtofficial_)
+[![Subscribe on YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@officialcwt)
+[![Follow on TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://tiktok.com/@cwtofficial__)
 
 </div>
 
